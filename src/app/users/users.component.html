@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col col-md-10">&nbsp;</div>
-        <div class="col col-md-2"><button>Insert User</button></div>
+        <div class="col col-md-2"><button [routerLink] = "['user-add']">Insert User</button></div>
     </div>
     <br/>
     <div class="row">
@@ -22,7 +22,7 @@
             <td>{{user.first_name}}</td>
             <td>{{user.last_name}}</td>
             <td>{{user.email}}</td>
-            <td><span><button [routerLink] = "['user-add/',user.id]">View</button></span><span><button>Update</button></span></td>
+            <td><span><button [routerLink] = "['user-view/',user.id]">View</button></span><span><button [routerLink] = "['user-edit/',user.id]">Update</button></span></td>
         </tr>
         </tbody>
     </table>

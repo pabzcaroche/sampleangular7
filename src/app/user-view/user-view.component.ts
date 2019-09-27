@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-user-edit',
-  templateUrl: './user-edit.component.html',
-  styleUrls: ['./user-edit.component.scss']
+  selector: 'app-user-view',
+  templateUrl: './user-view.component.html',
+  styleUrls: ['./user-view.component.scss']
 })
-export class UserEditComponent implements OnInit {
+export class UserViewComponent implements OnInit {
+
+  user : Object;
 
   id : String;
 
-  user : Object;
-  
   constructor(private userService : UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
